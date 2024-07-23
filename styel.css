@@ -35,7 +35,7 @@ body{
     background: rgb(0, 0, 0);
     min-height: 100vh;
     display: block;
-    padding: 0 30px;
+    padding: 0 100px;
     opacity: 1;
     padding-top: 60px;
      padding-bottom: 70px;
@@ -187,8 +187,7 @@ ul{
 .aside .logo span{
     font-weight: 700;
     font-family: 'Clicker Script';
-    font-size: 36px;
-    /* margin-right: 10px; */
+    font-size: 46px;
     margin-right: 8px;
     letter-spacing: 3px;
 }
@@ -228,14 +227,16 @@ ul{
 /* HOME */
 
 .home{
-    min-height: 100vh;
+   height: 100%;
     display: flex;
+    justify-content: space-between;
     color: var(--text-black-900);
 }
 
 .home .home-info{
     flex: 0 0 60%;
     max-width: 60%;
+    margin-top: 10vh;
 }
 
 h3.hello-1{
@@ -272,7 +273,8 @@ h3.hello-1{
 
 
 .home-img img{
-    height: 400px;
+    margin-left: 20vh;
+    height: 70vh;
     border-radius: 50%;
 }
 
@@ -313,7 +315,69 @@ h3.hello-1{
 .about .about-content .personal-info{
     flex: 0 0 60%;
     max-width: 60%;
+    margin-top: 5vh;
 }
+
+.about .about-content .personal-info .info-item{
+    flex: 0 0 50%;
+    max-width: 50%;
+    
+}
+
+.about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgba(255, 0, 0, 0.769);
+    border-bottom:  1px solid black;
+}
+
+.about .about-content .personal-info .info-item p span{
+    font-weight: 500;
+    color: rgb(128, 115, 96);
+    margin-left: 5px;
+    /* display: inline-block; */ 
+}
+
+/* About Percussion */
+
+.about-p .about-p-content{
+    flex:0 0 100%;
+    max-width: 100%;
+   }
+ 
+ .about-p .about-p-content .about-p-text{
+     flex: 0 0 100%;
+     max-width:100%;
+   
+ }
+ 
+ .about-p .about-p-content .about-p-text h3{
+     font-size: 27px;
+     margin-bottom: 15px;
+     font-weight: 700;
+     color: white;
+ }
+ 
+ .about-p .about-p-content .about-p-text h3 span{
+     color: #ec1838;
+     font-size:  45px;
+ }
+ 
+ .about-p .about-p-content .about-p-text p{
+     font-size: 20px;
+     font-weight: 540;
+     line-height: 25px;
+     color: rgba(246, 246, 246, 0.507);
+ 
+ }
+ 
+ 
+ 
+
+
+
+
 
 
 
