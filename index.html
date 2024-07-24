@@ -1,155 +1,388 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvas Singari Melam</title>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styel.css">
-    <link rel="stylesheet" href="styel2.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <!--main-->
-    <div class="main-container">
-    <!-- aside bar -->
-        <div class="aside">
-            <!-- logo of something still not decide by Akash -->
-             <div class="logo">            
-                <a href="#"><span>SingariMelam</span></a>
-             </div>
-             <!-- <div class="nav-toogler">
-                <span></span>
-             </div> -->
-             <ul class="nav">
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#" class="not-active">About us</a></li> 
-              <li><a href="#" class="not-active">About Percussion</a></li>
-              <li><a href="#" class="not-active">Glimpse</a></li>  
-              <li><a href="#" class="not-active">Achivements</a></li>
-              
-               <!-- <li><a href="#"><i class="fa fa-home"></i></a></li>  -->
-              
-             </ul>
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-         </div>
-         <!-- aside div end -->
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
 
-         <div class="main-content">
-            <section class="home section hidde">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello-1">Know more about us here!!</h3>
-                            <h3 class="my-proffesion">Welcome to <span class="name typing">Alvas Singari Melam</span></h3>
-                            <p>We are more than just a team,we are a family. We are bound by our shared love towards chenda. 
-                                We support each other on and off the stage promising dedication, discipline,determination..</p>
+}
 
-                        </div>
-                        <div class="home-img ">
-                            <img src="logo.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- home section end  -->
-             <!-- About section start -->
-             <section class="about section hidde">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="section-title padd-15">
-                            <h2 id="about">About us</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>We Are Team <span>"Alvas Singari Melam"</span></h3>
-                                      <p>
-                                        In the heart of every unforgettable melody and  pulsating rhythm lies the synergy of talented individuals , each contributing their unique flair to create and extraordinary musical journey. 
-                                        Alvas Singarimelam epitomizes this fusion of creativity , skill and passion ,transceding boundaries to deliver performance that resonate with audience worldwide.
-                                        Comprising 50 exceptional museicians hailing from diverse background and genrs. Alvas Singarimelam team brings together a walth of experiences and shared dedication to their craft.
-                                        Founded on a belief that music is universal language that knows no limit.
-                                        Join Alvas Singarimelam team on a journey where melody's intertwine rythem pulse with life and every notes resonate with passion and purpose.Experience the magic of Alvas Singarimelam as they redefine what it means to create music that transcends borders and speads to the soul                                       </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                             <p>Found-in : <span>2012</span> </p>
-                                    </div>
-                                    <div class="info-item padd-15">
-                                        <p>Faculty co-ordinater : <span>Nithin KR</span> </p>
-                               </div>
-                               <div class="info-item padd-15">
-                                <p>Total Members: <span>50</span> </p>
-                                  </div>
-                                  <div class="info-item padd-15">
-                            <p> Student co-ordinator : <span>Sujay SP</span> </p>
-                                    
-                           </div>
-                           <div class="info-item padd-15">
-                            <p>Location : <span>Alvas Institute Of Engineering And Technology (Shobhavana Campus)</span> </p>
-
-                   </div>
-                       
-                                </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-
-
-
-              <!-- About section end  -->
-               <!-- About Percussion start -->
-               <section class="about-p section hidde">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="section-title padd-15">
-                            <h2 id="about-p">About Percussion</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-p-content padd-15">
-                            <div class="row">
-                                <div class="about-p-text padd-15">
-                                    <h3> <span>Chenda</span></h3>
-                                      <p>
-                                        Chenda Melam is a traditional percussion originated from the southern Indian state of Kerala, renowned for its vibrant rhythms and cultural significance. Here's an overview covering various aspects of Chenda Melam :
-                                        Chenda Melam has deep roots in Kerala's cultural heritage and is integral to temple festivals, ceremonies, and traditional art forms like Kathakali and Theyyam. It originated as a sacred music tradition played during temple rituals and gradually evolved into a performance art that accompanies various festive occasions.
-
-                                      </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-                   
-                 <!-- About Percussion end-->
-
-            
-            
-
-
-         </div>
-
-
+body{
+    margin:0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
     
-    </div>
+}
 
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+
+/* change clor white to black  */
+.section{
+    background: rgb(0, 0, 0);
+    min-height: 100vh;
+    display: block;
+    padding: 0 100px;
+    opacity: 1;
+    padding-top: 60px;
+     padding-bottom: 70px;
+}
  
-    <script src="app.js"></script>
-</body>
-</html>
+.hidden{
+    display: none !important;
+}
+
+.main-content{
+    padding-left: 270px;
+}
+
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul{
+   list-style: none;
+}
+
+.container{
+    max-width: 1100px;
+    width: 100%;
+    /* margin: auto; */
+}
+
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+.section-title h2{
+    font-size: 45px;
+    color: white;
+    /* color: #ec1839; */
+    font-weight: 700;
+    position: relative;
+}
+.section-title h2::before{
+     content: '';
+     height: 4px;
+     width: 50px;
+     background-color: #ec1839;
+     position: absolute;
+     top: 100%;
+     left: 0;
+}
+.section-title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: #ec1839;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+/* aside */
+.aside{
+    width: 270px;
+    height: 100%;
+    background-color: burlywood;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    padding: 30px;
+    top: 0;
+    z-index: 10;
+    
+}
+
+/* .nav-toogler{
+    height: 40px;
+    width: 45px;
+    border: 1px solid #e8dfec ;
+    background-color: #e8dfec;
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.nav-toogler span{
+    height: 2px;
+    width: 18px;
+    /* background: red; */
+    display: inline-block;
+    position: relative;
+}
+
+.nav-toogler span::before{
+    content: '';
+    height: 3px;
+    width: 18px;
+    background: red;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+
+.nav-toogler span::after{
+    content: '';
+    height: 3px;
+    width: 18px;
+    background: red;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.aside .logo{
+    position: absolute;
+    top: 85px;
+}
+
+.aside .logo a{
+    color: var(--text-black-900);
+    font-weight: 550;
+    /* background-color: red; */
+    padding: 15px 20px;
+    font-size: 20px;
+    letter-spacing: 1.5 px;
+    position: relative;
+}
+
+.aside .logo span{
+    font-weight: 700;
+    font-family: 'Clicker Script';
+    font-size: 46px;
+    margin-right: 8px;
+    letter-spacing: 3px;
+}
+
+.aside .nav{
+    margin-top: 50px;
+
+}
+
+.aside .nav li{
+    margin-bottom: 50px;
+    display: block;
+}
+
+.fa{
+    margin: 5px;
+}
+
+.not-active{
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: #302e4d;
+    padding: 5px 15px;
+}
+
+.active{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    padding: 5px 15px;
+}
+
+/* HOME */
+
+.home{
+   height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-black-900);
+}
+
+.home .home-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 10vh;
+}
+
+h3.hello-1{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 15px 0;
+  color: #e8dfec;
+}
+
+.my-proffesion{
+    font-size: 30px;
+    margin: 15px 0;
+    color: #e8dfec;
+  }
+
+.typing{
+    font-size: 38px;
+    color: red;
+}
+
+.home-info p{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: #e8dfec;
+}
+
+.home .home-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.home-img img{
+    margin-left: 20vh;
+    height: 70vh;
+    border-radius: 50%;
+}
+
+/* About */
+
+
+
+ .about .about-content{
+   flex:0 0 100%;
+   max-width: 100%;
+  }
+
+.about .about-content .about-text{
+    flex: 0 0 100%;
+    max-width:100%;
+  
+}
+
+.about .about-content .about-text h3{
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.about .about-content .about-text h3 span{
+    color: #ec1838;
+}
+
+.about .about-content .about-text p{
+    font-size: 18px;
+    font-weight: 540;
+    line-height: 25px;
+    color: rgba(246, 246, 246, 0.507);
+
+}
+
+.about .about-content .personal-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 5vh;
+}
+
+.about .about-content .personal-info .info-item{
+    flex: 0 0 50%;
+    max-width: 50%;
+    
+}
+
+.about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(238, 0, 71);
+    border-bottom:  1px solid black;
+}
+
+.about .about-content .personal-info .info-item p span{
+    font-weight: 500;
+    color: rgb(128, 115, 96);
+    margin-left: 5px;
+    /* display: inline-block; */ 
+}
+
+/* About Percussion */
+
+.about-p .about-p-content{
+    flex:0 0 100%;
+    max-width: 100%;
+   }
+ 
+ .about-p .about-p-content .about-p-text{
+     flex: 0 0 100%;
+     max-width:100%;
+   
+ }
+ 
+ .about-p .about-p-content .about-p-text h3{
+     font-size: 27px;
+     margin-bottom: 15px;
+     font-weight: 700;
+     color: white;
+ }
+ 
+ .about-p .about-p-content .about-p-text h3 span{
+     color: #ec1838;
+     font-size:  45px;
+ }
+ 
+ .about-p .about-p-content .about-p-text p{
+     font-size: 20px;
+     font-weight: 540;
+     line-height: 25px;
+     color: rgba(246, 246, 246, 0.507);
+ 
+ }
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
