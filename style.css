@@ -8,10 +8,11 @@
     --text-black-700:#504e70;
 
 }
-/* Hide scroll bars for the entire page */
+
 html, body {
     overflow: hidden;
     margin: 0; /* Optional: Remove default margin */
+    
 }
 
 
@@ -40,8 +41,11 @@ body{
 .section{
     background: rgb(0, 0, 0);
     min-height: 100vh;
+    display: block;
+    /* position: fixed; */
     width: 100%;
     left: 270px;
+    padding: 0 30px;
     top: 0;
     right: 0;
     z-index: 0;
@@ -66,12 +70,13 @@ body{
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     margin: auto;
-    padding-left: 40px;
+    /* padding-left: 40px; */
 }
 
+ 
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -175,14 +180,22 @@ body{
     left: 300px;
     top: 20px;
     border-radius: 5px;
-    /* background-color: var(--bg-black-100); */
+   
     background-color: #000000;
-    display: flex;
-    flex-direction: column; /* Align bars vertically */
-    justify-content: center; /* Center bars vertically */
-    padding: 5px; /* Optional padding */
-    position: relative; /* Required for absolute positioning of pseudo-elements */
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+} 
+
+.aside .nav-toggler span {
+    height: 2px;
+    width: 18px;
+    background: red;
+    display: inline-block;
+    position: relative;
 }
+
 
 .nav-toggler .bar {
     height: 3px; /* Thickness of the bars */
@@ -193,17 +206,27 @@ body{
     margin: 10px 2.2px; /* Space between bars */
 }
 
-.nav-toggler .bar::before,
-.nav-toggler .bar::after {
+
+.nav-toggler .bar::before{
     content: '';
-    height: 3.5px; /* Thickness of the pseudo-elements */
-    width: 30px; /* Width of the pseudo-elements */
+    height: 2px; /* Thickness of the pseudo-elements */
+    width: 18px; /* Width of the pseudo-elements */
     background: #ec1838; /* Color of the pseudo-elements */
     position: absolute; /* Positioning within the bar */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    border-radius: 5px;
+    top: -6px;
+    left: 0;
+    
+}
 
+.nav-toggler .bar::after{
+    content: '';
+    height: 2px; /* Thickness of the pseudo-elements */
+    width: 18px; /* Width of the pseudo-elements */
+    background: #ec1838; /* Color of the pseudo-elements */
+    position: absolute; /* Positioning within the bar */
+    top: 6px;
+    left: 0;
+    
 }
 
 .nav-toggler .bar::before {
@@ -496,33 +519,44 @@ body{
 
 /* Hover effect */
 .service-item-inner:hover {
-    transform: scale(1.10);
+    transform: scale(1.12);
 }
 
 /* Responsive styles */
-/* @media (min-width: 768px) {
-    .service-item {
-        width: 33.333%;
-    }
 
-    .section-title h2 {
-        font-size: 3rem;
-    }
-} */
 
- @media (max-width:1530px)
-{
+@media (max-width:1199px){
     .aside{
         left: -270px;
     }
-    .main-content{
-        padding-left: 0;
+    /* .main-content{
+        padding: -270px;
+    } */
+     .aside.open {
+        left: 0;
+     }
+
+     .aside .nav-toggler.open{
+        left: 300px;
+     }
+
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
     }
+    .section{
+        left: 0;
+    }
+    .section.open{
+        left: 270px;
+    }
+     
 }
 
 @media(max-width:991px)
 {
     .home .home-img{
+
         display: none;
     }
     .home .home-info{
@@ -535,6 +569,18 @@ body{
     }
 }
 
+
+
+ @media (max-width:1530px)
+{
+    .aside{
+        left: -270px;
+    }
+    .main-content{
+        padding-left: 0;
+    }
+}
+
 @media (max-width:767px)
 {
     .service .service-item,
@@ -542,9 +588,22 @@ body{
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .service .service-item{
+        padding-right:35px ;
+    }
 }
- 
- 
+
+
+ @media (max-width: 767px) {
+    .nav-toggler {
+        display: block; 
+        cursor: pointer; 
+
+    }
+
+}
+  
+
 
 
 
