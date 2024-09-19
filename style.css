@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -10,7 +14,7 @@
 }
 
 html, body {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0; /* Optional: Remove default margin */
     
 }
@@ -41,23 +45,39 @@ body{
 .section{
     background: rgb(0, 0, 0);
     min-height: 100vh;
-    display: block;
-    /* position: fixed; */
-    width: 100%;
-    left: 270px;
     padding: 0 30px;
-    top: 0;
-    right: 0;
     z-index: 0;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.section.back-section{
+    z-index: 1;
+}
+.section.active{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+@keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
  
 .hidden{
     display: none !important;
-}
-
-.main-content{
-    padding-left: 270px;
 }
 
 .padd-15{
@@ -75,7 +95,6 @@ body{
     margin: auto;
     /* padding-left: 40px; */
 }
-
  
 .row{
     display: flex;
@@ -96,6 +115,7 @@ body{
     margin-top: 5vh;
     margin-bottom: 60px;
 }
+
 .section-title h2{
     font-size: 45px;
     color: white;
@@ -103,6 +123,7 @@ body{
     font-weight: 700;
     position: relative;
 }
+
 .section-title h2::after{
     content: "";
     height: 4px;
@@ -123,6 +144,7 @@ body{
     left: 0;
     margin-top: 8px;
 }
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -132,7 +154,7 @@ body{
 }
 
 /* aside */
-
+ 
 .aside{
     width: 270px;
     height: 100%;
@@ -180,12 +202,11 @@ body{
     left: 300px;
     top: 20px;
     border-radius: 5px;
-   
     background-color: #000000;
     display: none;
     align-items: center;
     justify-content: center;
-
+    transition: all 0.5s ease ;
 } 
 
 .aside .nav-toggler span {
@@ -196,6 +217,9 @@ body{
     position: relative;
 }
 
+.aside .nav-toggler.open span{
+    background-color: transparent;
+}
 
 .nav-toggler .bar {
     height: 3px; /* Thickness of the bars */
@@ -206,7 +230,6 @@ body{
     margin: 10px 2.2px; /* Space between bars */
 }
 
-
 .nav-toggler .bar::before{
     content: '';
     height: 2px; /* Thickness of the pseudo-elements */
@@ -216,6 +239,11 @@ body{
     top: -6px;
     left: 0;
     
+}
+
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
 }
 
 .nav-toggler .bar::after{
@@ -229,6 +257,11 @@ body{
     
 }
 
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
 .nav-toggler .bar::before {
     top: -6px; /* Position above the bar */
 }
@@ -236,9 +269,6 @@ body{
 .nav-toggler .bar::after {
     bottom: -6px; /* Position below the bar */
 }
-
-
-
 
 .aside .nav{
     margin-top: 220px;
@@ -254,7 +284,6 @@ body{
 .aside .nav li{
     margin-bottom: 50px;
     display: block;
-    
 }
 
 .fa{
@@ -313,6 +342,17 @@ body{
     color: #888; /* Color on hover */
 }
 
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: #fefbfb;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap;
+    background: #e1092a;
+}
+
 /* HOME */
 
 .home{
@@ -331,24 +371,26 @@ body{
   font-weight: 400;
   margin: 15px 0;
   color: #ced0e2;
-  
+  font-family: Roboto;
 }
 
 .my-proffesion{
-    font-family: Arial, Helvetica, sans-serif;
+    
     font-size: 30px;
     margin: 15px 0;
     color: #e8dfec;
+    font-family: Poppins;
+    /* padding-bottom: 50px; */
 }
 
 .typing{ 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
     font-size: 38px;
     color: red;
 }
 
 .home-info p{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto;
     margin-bottom: 70px;
     font-size: 20px;
     color: gray;
@@ -402,24 +444,24 @@ body{
     margin-bottom: 15px;
     font-weight: 700;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
 }
 
 .about .about-content .about-text h3 span{
     font-size: 4.5vh;
     color: #ec1838;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
 }
 
 .about .about-content .about-text p{
-    font-size: 20px;
-    font-weight: 540;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 3.3vh;
     letter-spacing: 0.7px;
     color: rgba(246, 246, 246, 0.507);
     font-family:serif;
     margin-top: 4vh;
-
+    font-family: Roboto;
 }
 
 .about .about-content .personal-info{
@@ -471,13 +513,15 @@ body{
  .about-p .about-p-content .about-p-text h3 span{
      color: #ec1838;
      font-size:  35px;
+     font-family: Poppins;
  }
  
  .about-p .about-p-content .about-p-text p{
-     font-size: 20px;
-     font-weight: 540;
+     font-size: 17px;
+     font-weight: 500;
      line-height: 25px;
      color: rgba(246, 246, 246, 0.507);
+     font-family: Roboto;
  }
 
  .extra{
@@ -503,7 +547,7 @@ body{
 }
 
 .service-item-inner {
-    background-color: #e6ae6ee5; /* Tailwind's bg-yellow-600 */
+    background-color: #e6ae6ee5; 
     padding: 2rem;
     border-radius: 0.75rem;
     text-align: center;
@@ -511,10 +555,11 @@ body{
 }
 
 .service-item-inner h4 {
-    color: black;
+    color: rgba(0, 0, 0, 0.811);
     font-size: 1.25rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Hover effect */
@@ -529,8 +574,12 @@ body{
     .aside{
         left: -270px;
     }
+    .btn{
+        margin-left: 15px;
+    }
+    
     /* .main-content{
-        padding: -270px;
+        padding-left: 0;
     } */
      .aside.open {
         left: 0;
@@ -563,6 +612,11 @@ body{
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .btn{
+        margin-left: 15px;
+    }
+
+
     .service .service-item{
         flex: 0 0 50%;
         max-width: 50%;
@@ -579,6 +633,9 @@ body{
     .main-content{
         padding-left: 0;
     }
+    .btn{
+        margin-left: 15px;
+    }
 }
 
 @media (max-width:767px)
@@ -591,6 +648,9 @@ body{
     .service .service-item{
         padding-right:35px ;
     }
+    .btn{
+        margin-left: 15px;
+    }
 }
 
 
@@ -600,6 +660,12 @@ body{
         cursor: pointer; 
 
     }
+    .btn{
+        margin-left: 15px;
+    }
+    /* .home-info p{
+       margin-top: 200px;
+    } */
 
 }
   
