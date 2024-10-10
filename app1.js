@@ -37,7 +37,7 @@ let typed; // Declare typed variable outside for access in other functions
 
 function startTyping() {
   typed = new Typed(".typing", {
-    strings: ["", "Alva's Singari Melam", "അൽവാസ് ശിങ്കാരിമേളം", "ಆಳ್ವಾಸ್ ಸಿಂಗಾರಿ ಮೇಳ", "अल्वास् सिंगारि मेलम्"],
+    strings: ["", "Alva's Singari Melam"],
     typeSpeed: 100, // Typing speed
     backSpeed: 150, // Backspacing speed
     backDelay: 1000, // Delay before starting to backspace
